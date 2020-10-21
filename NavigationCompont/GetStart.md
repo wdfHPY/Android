@@ -104,4 +104,41 @@
     ```
 ***
 - 以上便是添加主`Activity`和`Fragment`之后的xml文件。
+- 加上操作之后
+        ```xml
+        <?xml version="1.0" encoding="utf-8"?>
+        <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_res"
+            app:startDestination="@id/mainActivity">
+            <fragment
+                android:id="@+id/blankFragment"
+                android:name="top.wangdf.navigationcomponent.fragment.ui.BlankFragment"
+                android:label="fragment_blank"
+                tools:layout="@layout/fragment_blank" >
+                <action
+                    android:id="@+id/action_blankFragment_to_itemFragment"
+                    app:destination="@id/itemFragment" />
+            </fragment>
+            <fragment
+                android:id="@+id/itemFragment"
+                android:name="top.wangdf.navigationcomponent.fragment.ui.ItemFragment"
+                android:label="fragment_item_list"
+                tools:layout="@layout/fragment_item_list" />
+            <activity
+                android:id="@+id/mainActivity"
+                android:name="top.wangdf.navigationcomponent.MainActivity"
+                android:label="activity_main"
+                tools:layout="@layout/activity_main" />
+        </navigation>
+        ```
+- 对比可以知道，操作是由`<action>` 标签来指定。
+      ```xml
+        <action
+            android:id="@+id/action_blankFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        ```
+    在导航图中，操作由 <action> 元素表示。操作至少应包含自己的 ID 和用户应转到的目的地的 ID。上面的`fragment`即从 blankFragment 转到 itemFragment 
+    属性` app:destination `来指定目标目的地。
 
