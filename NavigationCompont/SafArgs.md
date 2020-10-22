@@ -1,0 +1,2 @@
+- ![安全参数](https://i.loli.net/2020/10/22/uJyL5iPCvQozhsr.png)
+- ![安全参数生成的文件](https://i.loli.net/2020/10/22/M5xHtqTLFPjcBhl.png)

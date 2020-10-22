@@ -17,8 +17,8 @@
         implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
         // Testing Navigation
-        androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
-        }
+        androidTestImplementation "androidx.navigation:navigation-testing:$nav_version导航图显示了可用的目的地。目的地之间的箭头称为动作。稍后您将了解有关操作的更多信息。"
+        }导航图显示了可用的目的地。目的地之间的箭头称为动作。稍后您将了解有关操作的更多信息。
  ```
 #### 创建导航图
 1. 导航图：导航发生在应用中的各个**目的地**（即您的应用中用户可以导航到的任意位置）之间。这些目的地是通过操作连接的。导航图是一种资源文件，其中包含您的所有目的地和操作。该图表会显示应用的所有导航路径。
@@ -27,10 +27,7 @@
      - 第二个方面是描述目的地之间的关系。
 2. 如何创建导航图：
    - 在` Project `窗口中，右键点击 `res` 目录，然后依次选择 `New` > `Android Resource File`。此时系统会显示 New Resource File 对话框。
-   - 在 `File name` 字段中输入名称，例如“`nav_graph`”。
-   - 从 `Resource type` 下拉列表中选择 `Navigation`，然后点击 OK。
-   - 添加首个导航图时，Android Studio 会在 res 目录内创建一个 navigation 资源目录。该目录包含您的导航图资源文件（例如 `nav_graph.xml`）
-    ***
+   - 在 `File name` 字段中输入名称，例如“`nav_graph`”。导航图显示了可用的目的地。目的地之间的箭头称为动作。稍后您将了解有关操作的更多信息。
     ```xml
         <?xml version="1.0" encoding="utf-8"?>
         <navigation xmlns:android="http://schemas.android.com/apk/res/android"
@@ -141,4 +138,6 @@
         ```
     在导航图中，操作由 <action> 元素表示。操作至少应包含自己的 ID 和用户应转到的目的地的 ID。上面的`fragment`即从 blankFragment 转到 itemFragment 
     属性` app:destination `来指定目标目的地。
+
+   -  ![成功添加目的地和操作](https://i.loli.net/2020/10/22/eWatJYKGuV5l1kd.png)
 
